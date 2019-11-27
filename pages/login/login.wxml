@@ -8,3 +8,7 @@
 <view>counter: {{counter}}</view>
 <button size='mini' bindtap='handleAdd'>+</button>
 <button size='mini' bindtap='handleSub'>-</button>
+
+
+
+<view>知识点2</view>
