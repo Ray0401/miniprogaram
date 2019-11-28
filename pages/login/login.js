@@ -35,6 +35,13 @@ Page({
       counter: this.data.counter -= 1
     })
   },
+  // 跳转
+  handleClick(){
+    console.log('路由跳转')
+    wx.navigateTo({
+      url: '/pages/home/home'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

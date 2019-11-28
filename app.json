@@ -2,5 +2,6 @@
   "pages": [
     "pages/login/login",
     "pages/home/home"
-  ]
+  ],
+  "sitemapLocation": "sitemap.json"
 }

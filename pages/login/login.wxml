@@ -3,8 +3,12 @@
 <!-- 数据绑定  {{}}  Mustache 语法 -->
 <view>{{name}}</view>
 <!-- 列表展示 -->
-<view wx:for='{{students}}'>{{item.name}}</view>
+<view wx:for='{{students}}'>{{item.i}}-{{item.name}}</view>
 <!-- 事件监听改变data -->
 <view>counter: {{counter}}</view>
 <button size='mini' bindtap='handleAdd'>+</button>
 <button size='mini' bindtap='handleSub'>-</button>
+
+
+<!-- 知识点3 路由跳转-->
+<button size='mini' bindtap='handleClick' >点击跳转</button>
