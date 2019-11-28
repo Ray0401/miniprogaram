@@ -21,7 +21,7 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.9.3",
+	"libVersion": "2.9.4",
 	"appid": "wx1bf056ee3e68aa87",
 	"projectname": "wx-program",
 	"cloudfunctionTemplateRoot": "",

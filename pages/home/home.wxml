@@ -1,2 +1,8 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
+<view></view>
+
+<text>我是首页</text>
+<view>宝贝我爱你 {{counter}}</view>
+<button size='mini' bindtap='handleClick'>点击</button>
+<button size='mini' bindtap='handleJump'>跳转</button>
