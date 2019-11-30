@@ -1,0 +1,8 @@
+/* pages/button/button.wxss */
+.button{
+  width: 100px;
+  height: 100px;
+}
+.button_hover{
+  background: pink;
+}

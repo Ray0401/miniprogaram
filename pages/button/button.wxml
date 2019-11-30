@@ -1,0 +1,4 @@
+<!--pages/button/button.wxml-->
+
+<!-- button 组件-->
+<button size='mini' type='plain' class='button' hover-class="button_hover" hover-start-time='2000' hover-stay-time='2000'>box</button>
