@@ -13,6 +13,20 @@
 <!-- 知识点3 路由跳转-->
 <button size='mini' bindtap='handleClick'>点击跳转到首页</button>
 
-<view wx:for="{{[1,2,3]}}" wx:key="*this">
+<view wx:for="{{array}}" wx:key="*this">
   {{item}}
 </view>
+
+<import src='item.wxml' />
+<template is='msgItem' data="{{...item}}"></template>
+<view> head </view>
+<include src='item.wxml' />
+
+
+<!-- 获取授权方式的三种方法 -->
+<!-- 第一 使用 button open-type='getUserInfo' bindgetuserinfo回调 -->
+<button size='mini' open-type="getUserInfo"  bindgetuserinfo="handleBtnClick">获取用户信息</button>
+
+<!-- 页面使用 open-data标签直接绑定值 -->
+<open-data type='userNickName'></open-data>
+<open-data type='userAvatarUrl'></open-data>

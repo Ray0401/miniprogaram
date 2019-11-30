@@ -3,6 +3,17 @@
 <view></view>
 
 <text>我是首页</text>
-<view>宝贝我爱你 {{counter}}</view>
+<view>{{counter}}</view>
 <button size='mini' bindtap='handleClick'>点击</button>
 <button size='mini' bindtap='handleJump'>跳转</button>
+
+<!-- <import src='../login/item.wxml' />
+<template is='msgItem' data="{{...item}}"></template> -->
+
+<!-- image组件 -->
+<view wx:for="{{1}}">
+  <image src='{{imagePath1}}'  mode="bottom" lazy-load show-menu-by-longpress bindload='handleImageLoad'/>
+</view>
+
+<button bindtap="chooseImage">选择图片</button>
+<image src='{{imagePath2}}' mode='scaleToFill' />

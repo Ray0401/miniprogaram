@@ -1,4 +1,5 @@
 // pages/login/login.js
+const common = require('../../utils/common.js'); //require的路径只能是相对路径
 Page({
 
   /**
@@ -19,28 +20,13 @@ Page({
       id: 4,
       name: 'd'
     }],
-    counter: 0
-  },
-  // 加法操作
-  handleAdd() {
-    // this.data.counter += 1;
-    // console.log(this.data.counter);
-    this.setData({
-      counter: this.data.counter += 1
-    })
-  },
-  // 减法操作
-  handleSub() {
-    this.setData({
-      counter: this.data.counter -= 1
-    })
-  },
-  // 跳转
-  handleClick() {
-    console.log('路由跳转')
-    wx.switchTab({
-      url: '../home/home'
-    })
+    counter: Math.random().toString(10).substr(2) - 0,
+    array: [],
+    item: {
+      index: 0,
+      msg: '哈哈',
+      time: '2019-11-29'
+    }
   },
   /**
    * 生命周期函数--监听页面加载
@@ -50,13 +36,19 @@ Page({
     var appInstance = getApp()
     console.log(appInstance.globalData)
     wx.showNavigationBarLoading()
+    common.sayHello();
+    common.sayName();
+    console.log(wx.env);
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-    
+    this.setData({
+      array: this.array = Array.from(Array(10), (item, index) => index)
+    })
+
   },
 
   /**
@@ -66,9 +58,9 @@ Page({
     wx.setNavigationBarTitle({
       title: '登录'
     })
-    setTimeout(()=>{
+    setTimeout(() => {
       wx.hideNavigationBarLoading()
-    },2000)
+    }, 2000)
   },
 
   /**
@@ -104,5 +96,32 @@ Page({
    */
   onShareAppMessage: function() {
     console.log(arguments)
-  }
+  },
+  onPageScroll: function(obj) {
+    // console.log('滚动',obj)
+  },
+  // 加法操作
+  handleAdd() {
+    // this.data.counter += 1;
+    // console.log(this.data.counter);
+    this.setData({
+      counter: this.data.counter += 1
+    })
+  },
+  // 减法操作
+  handleSub() {
+    this.setData({
+      counter: this.data.counter -= 1
+    })
+  },
+  // 跳转
+  handleClick() {
+    console.log('路由跳转')
+    wx.switchTab({
+      url: '../home/home'
+    })
+  },
+  handleBtnClick(event) {
+    console.log(event)
+  },
 })
