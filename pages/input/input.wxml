@@ -1,0 +1,9 @@
+<!-- 1. input的基础用法与绑值 -->
+<input placeholder="请输入文字" value='{{value}}' type="text" confirm-type='go'></input>
+<!-- 2. 修改placeholder的样式的两种方法 -->
+<input placeholder="请输入文字" value='{{value}}' placeholder-class="placeholder" type="text" confirm-type='go'></input>
+<input placeholder="请输入文字" value='{{value}}' placeholder-style="color:pink" type="text" confirm-type='go'></input>
+<!-- 3. input的一些监听事件 -->
+<input bindinput='bindinput' value='{{value_input}}'></input>
+<input bindfocus='bindfocus'></input>
+<input bindblur='bindblur'></input>
