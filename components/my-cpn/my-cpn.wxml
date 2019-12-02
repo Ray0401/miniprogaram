@@ -1,0 +1,3 @@
+<!-- 组件运用-->
+<view class='title myclass'>{{title}}</view>
+<view class='content'>{{content}}</view>

@@ -42,6 +42,12 @@ Page({
       url: '../home/home'
     })
   },
+  handleIncrement(){
+    console.log('监听到了')
+    this.setData({
+      counter: this.data.counter += 1
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -56,7 +62,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-    
+
   },
 
   /**
@@ -66,9 +72,9 @@ Page({
     wx.setNavigationBarTitle({
       title: '登录'
     })
-    setTimeout(()=>{
+    setTimeout(() => {
       wx.hideNavigationBarLoading()
-    },2000)
+    }, 2000)
   },
 
   /**

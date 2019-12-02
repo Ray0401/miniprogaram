@@ -16,3 +16,12 @@
 <view wx:for="{{[1,2,3]}}" wx:key="*this">
   {{item}}
 </view>
+
+<!-- 组件 -->
+<my-cpn title='哈哈哈' content='哈哈哈我是内容' myclass='red' />
+<my-cpn title='呵呵呵' content='呵呵呵我是内容' myclass='blue' />
+<my-cpn title='嘿嘿嘿' content='嘿嘿嘿我是内容' myclass='green' />
+
+<!-- 组件通信 -->
+<view>counter: {{counter}}</view>
+<my-event bind:handleIncrement='handleIncrement'/>
