@@ -1,0 +1,5 @@
+<!--components/my-tab/my-tab.wxml-->
+
+<view class='container'>
+  <view class='item {{active==index?"active":""}}' wx:for="{{tabList}}" wx:key='{{item.id}}' bind:tap="handleToggle" data-index="{{index}}">{{item.name}}</view>
+</view>

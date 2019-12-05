@@ -1,8 +1,19 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
 <view></view>
-
 <text>我是首页</text>
-<view>宝贝我爱你 {{counter}}</view>
+<view>{{counter}}</view>
 <button size='mini' bindtap='handleClick'>点击</button>
 <button size='mini' bindtap='handleJump'>跳转</button>
+
+<view>
+  <button bind:tap="getComponentsData">11111</button>
+  <my-tab tabList="{{tabList}}" id='my-tab' bind:toggleActived="toggleActived" />
+</view>
+
+
+<!-- 多个插槽 -->
+<!-- 需要在子组件设置options -> multipleSlots:true -->
+
+<my-slot>
+ <text slot='slot1'>哈哈哈</text>
+ <slider  slot='slot2' value='60'/>
+</my-slot>

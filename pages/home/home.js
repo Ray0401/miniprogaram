@@ -5,14 +5,39 @@ Page({
    * 页面的初始数据
    */
   data: {
-    counter: 1
+    counter: 1,
+    tabList: [{
+      id: 1,
+      name: '流行'
+    }, {
+      id: 2,
+      name: '精选'
+    }, {
+      id: 3,
+      name: '新款'
+    }],
+    active: 1
   },
   handleClick() {
     this.setData({
       counter: this.data.counter += 1
     })
-  }, 
-  handleJump(){
+  },
+  toggleActived(options) {
+    console.log('子组件传来的值', options.detail)
+  },
+  getComponentsData() {
+    const val = this.selectComponent('#my-tab');
+    console.log(val);
+    // 直接修改数据
+    // val.setData({
+    //   active: 1
+    // })
+
+    //通过方法进行修改
+    val.changeActive(2);
+  },
+  handleJump() {
     // 未设置tabbar的路由跳转
     // wx.navigateTo({
     //   url: '/pages/login/login',
