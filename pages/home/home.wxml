@@ -2,3 +2,10 @@
 <text>pages/home/home.wxml</text>
 <!-- <view wx:for="{{array}}">{{item}}</view> -->
 <view wx:for="{{array}}">{{item}}</view>
+
+<!-- 底部弹窗 -->
+<button bind:tap='clickBtn' size='mini'>点击按钮</button>
+
+<!--1. 分享按钮 -->
+<button open-type="share" size='mini'>分享</button>
+<!--2. 或者使用onShareAppMessage函数  -->
