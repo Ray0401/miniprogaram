@@ -1,2 +1,4 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
+<view>{{value}}</view>
+<button size='mini' bind:tap='jumpToAbout'>跳转到关于页面</button>
