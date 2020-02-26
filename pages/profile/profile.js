@@ -1,22 +1,18 @@
-import home from '../../service/home.js'
+// pages/profile/profile.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function () {
-    home.getMultiData(1).then(res=>{
-      // 首页数据返回
-      console.log('首页数据返回',res)
-    },error=>{
-      console.log(error)
-    })
+  onLoad: function (options) {
+
   },
 
   /**
