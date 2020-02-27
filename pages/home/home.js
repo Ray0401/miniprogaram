@@ -5,16 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
+    banners: [],
+    recommend: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function () {
-    home.getMultiData(1).then(res=>{
+  onLoad: function() {
+    home.getMultiData().then(res => {
       // 首页数据返回
-      console.log('首页数据返回',res)
-    },error=>{
+      console.log('首页数据返回', res)
+      const banners = res.banners;
+      const recommend = res.recommend;
+      this.setData({
+        banners,
+        recommend
+
+      })
+    }, error => {
       console.log(error)
     })
   },
@@ -22,49 +31,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

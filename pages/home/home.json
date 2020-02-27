@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": { //注册组件
+    "w-swiper":"/components/w-swiper/w-swiper"
+  },
   "navigationBarTitleText": "购物街"
 }
