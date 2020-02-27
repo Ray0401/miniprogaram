@@ -7,6 +7,7 @@ Page({
   data: {
     banners: [],
     recommends: [],
+    contentIndex: 0,
   },
 
   /**
@@ -75,5 +76,12 @@ Page({
    */
   onShareAppMessage: function() {
 
+  },
+  // 监听子组件发送来的事件
+  handleTabItemClick: function(e) {
+    console.log('监听子组件发送来的事件', e.detail["index"]);
+    this.setData({
+      contentIndex:e.detail["index"]
+    })
   }
 })

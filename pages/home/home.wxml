@@ -3,4 +3,12 @@
 <!-- 推荐 -->
 <w-recommend list='{{recommends}}' />
 <!-- tab栏 -->
-<w-tab />
+<w-tab bind:tabClick='handleTabItemClick' />
+<!-- 内容栏 -->
+<view class='content'>
+  <block wx:for='{{3}}' wx:key='index'>
+    <view wx:if='{{contentIndex===index}}'>
+      {{index}}
+    </view>
+  </block>
+</view>

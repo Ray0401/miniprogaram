@@ -29,10 +29,15 @@ Component({
    */
   methods: {
     tabItemClick(e) {
-      console.log(e.target.dataset.index);
+      console.log(e.currentTarget.dataset.index);
       this.setData({
         active: e.target.dataset.index
       })
+      // 向父组件发送事件
+      const data = {
+        index: this.data.active
+      }
+      this.triggerEvent("tabClick",data,{})
     }
   }
 })
