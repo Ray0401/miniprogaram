@@ -1,2 +1,6 @@
 <!-- 轮播图组件 -->
 <w-swiper list='{{banners}}' />
+<!-- 推荐 -->
+<w-recommend list='{{recommends}}' />
+<!-- tab栏 -->
+<w-tab />

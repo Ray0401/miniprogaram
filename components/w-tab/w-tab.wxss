@@ -1,0 +1,20 @@
+/* components/w-tab/w-tab.wxss */
+.tab {
+  display: flex;
+  padding: 20rpx 0;
+}
+
+.tab .tab-item {
+  flex: 1;
+  text-align: center;
+}
+
+.tab-item text {
+  padding: 0 10rpx 6rpx 10rpx;
+
+}
+
+.tab-item-active {
+  color:#ff5777;
+  border-bottom: 6rpx solid #ff5777;
+}

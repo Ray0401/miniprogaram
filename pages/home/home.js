@@ -6,7 +6,7 @@ Page({
    */
   data: {
     banners: [],
-    recommend: []
+    recommends: [],
   },
 
   /**
@@ -17,10 +17,10 @@ Page({
       // 首页数据返回
       console.log('首页数据返回', res)
       const banners = res.banners;
-      const recommend = res.recommend;
+      const recommends = res.recommends;
       this.setData({
         banners,
-        recommend
+        recommends
 
       })
     }, error => {
